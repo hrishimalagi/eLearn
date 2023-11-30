@@ -1,0 +1,18 @@
+/* Reset some default margin and padding */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 56px; /* Adjusted for fixed navbar */
+}
+
+.course-card {
+    margin-bottom: 20px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+}
