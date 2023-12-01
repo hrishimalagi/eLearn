@@ -9,7 +9,7 @@ const port = 3000;
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root', // Replace with your actual database username
-    password: 'HrishiM$943', // Replace with your actual database password
+    password: '', // Replace with your actual database password
     database: 'elearn', // Replace with your actual database name
 });
 
@@ -17,7 +17,7 @@ const db = mysql.createConnection({
 db.connect((err) => {
     if (err) {
         console.error('Error connecting to MySQL database: ' + err.stack);
-        return;
+        process.exit(1); // Exit the application if unable to connect to the database
     }
     console.log('Connected to MySQL database');
 });
@@ -30,7 +30,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/Contact.html');
 });
-
 
 // Handle form submissions
 app.post('/process_contact_form', (req, res) => {
@@ -47,7 +46,10 @@ app.post('/process_contact_form', (req, res) => {
             return;
         }
         console.log('Form data submitted successfully!');
-        res.send('<script>alert("Thanks! We will contact you soon"); window.location.href="/";</script>');
+
+
+        // Show an alert and then redirect
+        res.send('<script>alert("Thanks! We will contact you soon."); window.location.href="http://localhost:3000/Contact.html";</script>');
     });
 });
 
