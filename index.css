@@ -16,3 +16,6 @@ body {
     max-width: 400px;
     margin: 50px auto;
 }
+.navbar navbar-expand-lg navbar-dark bg-dark fixed-top{
+    color: royalblue !important;
+}
