@@ -74,6 +74,46 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+<!-- Script for form submission -->
+<script>
+    function submitForm() {
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            message: document.getElementById('message').value
+        };
+
+        // Display alert
+        alert('Form submitted successfully!');
+
+        // Redirect to the specified URL
+        window.location.href = '/Contact.html';
+    }
+
+    fetch('/process_contact_form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    // Redirect to the specified URL
+                    window.location.href = data.redirect;
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+    }
+</script>
 
 </body>
 
