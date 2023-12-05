@@ -20,7 +20,7 @@ const pool = mysql.createPool({
     connectionLimit: 10, // Adjust the limit based on your requirements
     host: 'localhost',
     user: 'root',
-    password: 'HrishiM$943',
+    password: '',
     database: 'elearn',
 });
 

@@ -19,3 +19,12 @@ body {
 .navbar navbar-expand-lg navbar-dark bg-dark fixed-top{
     color: royalblue !important;
 }
+ body {
+     padding-top: 56px; /* Adjusted for the fixed navbar height */
+     margin: 20px; /* Added margin to the body */
+ }
+.course-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    max-width: 400px; /* Added max-width to the cards */
+}
