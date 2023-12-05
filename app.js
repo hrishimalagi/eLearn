@@ -25,7 +25,6 @@ const pool = mysql.createPool({
 });
 
 // Handle form submissions
-// Handle form submissions
 app.post('/process_contact_form', (req, res) => {
     const { name, email, phone, message } = req.body;
 
