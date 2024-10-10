@@ -1,0 +1,19 @@
+.body {
+    padding-top: 56px; /* Adjusted for the fixed navbar height */
+}
+.about-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.team-member {
+    text-align: center;
+}
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
